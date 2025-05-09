@@ -1,0 +1,36 @@
+meta {
+  name: auth
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={{ACCESS_KEY}}
+  body: json
+  auth: none
+}
+
+params:query {
+  key: {{ACCESS_KEY}}
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "{{EMAIL}}",
+    "password": "{{SENHA}}",
+    "returnSecureToken": true
+  }
+}
+
+script:post-response {
+  function onResponse(res) {
+    const data = res.getBody();
+    bru.setGlobalEnvVar('GLOBAL_ACCESS_TOKEN', data.idToken || '');
+  }
+  
+  onResponse(res);
+}

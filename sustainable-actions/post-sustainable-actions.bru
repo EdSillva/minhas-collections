@@ -1,0 +1,27 @@
+meta {
+  name: post-sustainable-actions
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3335/sustainable-actions
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{GLOBAL_ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+    "title": "Uso da bicicleta",
+    "description": "Fui de bike ao trabalho novamente",
+    "points": 10
+  }
+}
