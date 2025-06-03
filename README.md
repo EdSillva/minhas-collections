@@ -13,4 +13,6 @@ ACCESS_KEY: Preenchimento_automatico
 
 ## Criar Enverioment Global
 
-Existe um globozinho lá em cima, criar uma env global chamada: GLOBAL_ACCESS_TOKEN
+![Env Global](assets/global-env.png)
+
+Existe um globozinho lá em cima, criar uma env global chamada: **GLOBAL_ACCESS_TOKEN**
