@@ -1,0 +1,25 @@
+meta {
+  name: Resgate
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/redeemed-rewards/redeem
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{GLOBAL_ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+    "rewardId": "c7eb6043-105b-49d6-b4c8-4c88d7eb1807"
+  }
+}

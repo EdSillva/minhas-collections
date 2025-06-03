@@ -1,0 +1,23 @@
+meta {
+  name: delete-sustainable-actions
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:3335/sustainable-actions/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 08cb9495-98a8-458b-ad14-8943b5844192
+}
+
+headers {
+  ~Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{GLOBAL_ACCESS_TOKEN}}
+}

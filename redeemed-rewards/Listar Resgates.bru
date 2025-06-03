@@ -1,17 +1,17 @@
 meta {
-  name: get-sustainable-actions
+  name: Listar Resgates
   type: http
-  seq: 1
+  seq: 2
 }
 
 get {
-  url: {{URL}}/sustainable-actions
+  url: {{URL}}/redeemed-rewards
   body: none
   auth: bearer
 }
 
 params:query {
-  ~user_id: 2769e13f-49ad-48c0-8db4-1ed7bb6789e1
+  ~id: 51e731f0-a61a-4282-bdd6-d284755798d8
 }
 
 headers {

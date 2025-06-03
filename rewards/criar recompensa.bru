@@ -1,0 +1,30 @@
+meta {
+  name: criar recompensa
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{URL}}/rewards
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{GLOBAL_ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+    "name": "Desconto de 10%",
+    "description": "Cupom de 10% de desconto em compras acima de R$50.",
+    "points_required": 100,
+    "stock": 50,
+    "partner_id": "7600a66b-5f03-4d21-8e89-18e45f1811fa"
+  }
+  
+}

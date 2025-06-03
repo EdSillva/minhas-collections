@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: http://localhost:3335/sustainable-actions
+  url: {{URL}}/sustainable-actions
   body: json
   auth: bearer
 }
@@ -20,8 +20,10 @@ auth:bearer {
 
 body:json {
   {
-    "title": "Uso da bicicleta",
-    "description": "Fui de bike ao trabalho novamente",
-    "points": 10
+    "title": "Uso da bicicleta teste dnv outra",
+    "description": "Fui de bike ao trabalho novamente teste",
+    "date_performed": "2025-05-18T14:30:00Z",
+    "image_url": "https://lqrbiqseypjaddrgxgox.supabase.co/storage/v1/object/sign/sustainable-action-images/the-last-of-us-ana.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2MwOTUzN2VjLTFkNmMtNDA0ZS05MzRiLThkNWQzM2E5YmMzMCJ9.eyJ1cmwiOiJzdXN0YWluYWJsZS1hY3Rpb24taW1hZ2VzL3RoZS1sYXN0LW9mLXVzLWFuYS5qcGciLCJpYXQiOjE3NDgyNzQ2NjcsImV4cCI6MTc0ODg3OTQ2N30.Sm-axhlL1lPzPIPg0iaWmruTyGMvoLp8yvNvE0t9tr0",
+    "points": 120
   }
 }
